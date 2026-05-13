@@ -14,7 +14,7 @@ async function getFeaturedBooks() {
     const books = data.data;
 
     featuredContent.innerHTML = `
-        <h2>Utvalda böcker</h2>
+        <h2 class="chosenBooks">Utvalda böcker</h2>
         <div class="featured-container">
             ${books.map(book => `
                 <div class="product-card" onclick="window.location.href='productsdetailed.html?id=${book.documentId}'">

@@ -11,6 +11,8 @@ async function getTheme() {
         document.querySelector(".products-main"),
         document.querySelector(".hero-section"),
         document.querySelector(".featured-section"),
+        document.querySelector(".login-main"),
+        document.querySelector(".register-main"),
     ].filter(Boolean);
 
     if (theme === "light") {
