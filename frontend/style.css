@@ -32,6 +32,7 @@ body {
     background-color: #1a1a2e;
     color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #f0ede8;
 }
 
 .logo {
@@ -155,6 +156,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 1px solid #f0ede8;
 }
 
 .footer-logo {

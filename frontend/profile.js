@@ -60,20 +60,20 @@ async function getReadingList() {
     }
 
     document.getElementById("sortSelect").addEventListener("change", (e) => {
-        const sortBy = e.target.value;
-        const cards = document.querySelectorAll(".reading-card");
-        const container = document.getElementById("readingListContainer");
+    const sortBy = e.target.value;
+    const cards = document.querySelectorAll(".reading-card");
+    const container = document.getElementById("readingListContainer");
 
-        const cardsArray = Array.from(cards);
+    const cardsArray = Array.from(cards);
 
-        cardsArray.sort((a, b) => {
-            const aText = a.querySelector(sortBy === "title" ? "h2" : ".author").textContent;
-            const bText = b.querySelector(sortBy === "title" ? "h2" : ".author").textContent;
-            return aText.localeCompare(bText, "sv");
-        });
-
-        cardsArray.forEach(card => container.appendChild(card));
+    cardsArray.sort((a, b) => {
+        const aText = a.querySelector(sortBy === "title" ? "h2" : ".author").textContent;
+        const bText = b.querySelector(sortBy === "title" ? "h2" : ".author").textContent;
+        return aText.localeCompare(bText, "sv");
     });
+
+    cardsArray.forEach(card => container.appendChild(card));
+});
 
     container.innerHTML = readingList.map(item => {
         const book = item.books[0];
